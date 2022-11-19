@@ -6,7 +6,7 @@ To run the tests in cypress
 Install Cypress 
 https://docs.cypress.io/guides/getting-started/installing-cypress#Installing
 
-Use these commands 
+Use these commands:
 
 **To open Cypress tool**
 npx cypress open
