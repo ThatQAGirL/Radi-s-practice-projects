@@ -1,9 +1,9 @@
 /// <reference types="Cypress" />
  
-describe('My Second Test Suite', function() 
+describe('My First Test Suite', function() 
 {
  
-it('My FirstTest case',function() {
+it('My 6th testcase',function() {
  
 
 cy.visit("https://rahulshettyacademy.com/AutomationPractice/")

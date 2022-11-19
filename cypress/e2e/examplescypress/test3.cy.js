@@ -1,7 +1,7 @@
 
 /// <reference types="Cypress" />
  
-describe('My third Test Suite', function() 
+describe('My first Test Suite', function() 
 {
  
 it('My third test case',function() {
