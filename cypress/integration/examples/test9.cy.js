@@ -26,6 +26,7 @@ cy.visit(Cypress.env('url') + "/angularpractice/")
     homePage.getTwoWayDataBinding().should('have.value', this.data.name)
     homePage.getEditBox().should('have.attr','minlength','2')
     homePage.getEntrepreneur().should('be.disabled')
+    Cypress.config('defautCommandTimeout' ,8000)
     //cy.pause()
     homePage.getShopTab().click()
 
