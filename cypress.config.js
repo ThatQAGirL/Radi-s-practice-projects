@@ -1,3 +1,6 @@
+const cucumber = require('cypress-cucumber-preprocessor').default
+
+
 module.exports ={
   
 
@@ -19,18 +22,21 @@ module.exports ={
 
   },
   */
+  projectId : "qu2kmg",
   
   e2e: {
     // We've imported your old cypress plugins here.
     // You may want to clean this up later by importing these.
     setupNodeEvents(on, config) {
-      return require('./cypress/plugins/index.js')(on, config)
+      //return require('./cypress/plugins/index.js')(on, config)
+      on('file:preprocessor', cucumber())
+   
     },
   
-  projectId : "qu2kmg"
+    specPattern: 'cypress/integration/examples/BDD/*.feature'
 
 
 
-  }
-
+  },
 }
+

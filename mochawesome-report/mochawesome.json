@@ -1,14 +1,14 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 1,
+    "tests": 2,
     "passes": 0,
     "pending": 0,
-    "failures": 1,
-    "start": "2022-11-20T14:44:14.078Z",
-    "end": "2022-11-20T14:44:41.200Z",
-    "duration": 27122,
-    "testsRegistered": 1,
+    "failures": 2,
+    "start": "2022-11-21T22:18:04.190Z",
+    "end": "2022-11-21T22:18:19.080Z",
+    "duration": 14890,
+    "testsRegistered": 2,
     "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
@@ -18,41 +18,63 @@
   },
   "results": [
     {
-      "uuid": "f2688982-d77e-4100-a85f-1a9538d6e68c",
+      "uuid": "e1f8d075-12a5-488f-b315-d9045d669a9c",
       "title": "",
-      "fullFile": "cypress\\e2e\\examplescypress\\GreenKart\\test2.cy.js",
-      "file": "cypress\\e2e\\examplescypress\\GreenKart\\test2.cy.js",
+      "fullFile": "cypress\\integration\\examples\\BDD\\ecommerce.feature",
+      "file": "cypress\\integration\\examples\\BDD\\ecommerce.feature",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "80133b97-16cb-44c7-a6f8-b8685d181e39",
-          "title": "My first Test Suite",
+          "uuid": "1a024712-bf01-48ad-b5a3-c51dc7c0fd82",
+          "title": "End to end Ecommerce validation",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "My second case",
-              "fullTitle": "My first Test Suite My second case",
+              "title": "Ecommerce products delivery",
+              "fullTitle": "End to end Ecommerce validation Ecommerce products delivery",
               "timedOut": null,
-              "duration": 10736,
+              "duration": 4419,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "cy.visit(\"https://rahulshettyacademy.com/\");\ncy.get('.search-keyword').type('ca');\ncy.wait(3000); //Parent child chaining\ncy.get('.products').as('productLocator');\ncy.get('@productLocator').find('.product').each(($el, index, $list) => {\n  const textVeg = $el.find('h4.product-name').text();\n  if (textVeg.includes('Cashews')) {\n    cy.wrap($el).find('button').click();\n  }\n});\ncy.get('.cart-icon > img').click();\ncy.contains('PROCEED TO CHECKOUT').click();\ncy.contains('Place Order').click();",
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
               "err": {
-                "message": "AssertionError: Timed out retrying after 8000ms: Expected to find element: `.search-keyword`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 8000ms: Expected to find element: `.search-keyword`, but never found it.\n    at Context.eval (https://rahulshettyacademy.com/__cypress/tests?p=cypress\\e2e\\examplescypress\\GreenKart\\test2.cy.js:103:8)",
+                "message": "TypeError: productPage.checkOutButton is not a function",
+                "estack": "TypeError: productPage.checkOutButton is not a function\n    at Context.eval (https://rahulshettyacademy.com/__cypress/tests?p=cypress\\integration\\examples\\BDD\\ecommerce.feature:68:15)\n    at Context.resolveAndRunStepDefinition (https://rahulshettyacademy.com/__cypress/tests?p=cypress\\integration\\examples\\BDD\\ecommerce.feature:12478:29)\n    at Context.eval (https://rahulshettyacademy.com/__cypress/tests?p=cypress\\integration\\examples\\BDD\\ecommerce.feature:11799:35)",
                 "diff": null
               },
-              "uuid": "8eab6cc3-9f41-4946-82bc-5ae5651bc960",
-              "parentUUID": "80133b97-16cb-44c7-a6f8-b8685d181e39",
+              "uuid": "ef49bc3d-99b8-4411-8ab0-2703e558dcaf",
+              "parentUUID": "1a024712-bf01-48ad-b5a3-c51dc7c0fd82",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Filling the form to shop",
+              "fullTitle": "End to end Ecommerce validation Filling the form to shop",
+              "timedOut": null,
+              "duration": 2398,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {
+                "message": "TypeError: homePage.getEntrepreneaur is not a function",
+                "estack": "TypeError: homePage.getEntrepreneaur is not a function\n    at Context.eval (https://rahulshettyacademy.com/__cypress/tests?p=cypress\\integration\\examples\\BDD\\ecommerce.feature:117:12)\n    at Context.resolveAndRunStepDefinition (https://rahulshettyacademy.com/__cypress/tests?p=cypress\\integration\\examples\\BDD\\ecommerce.feature:12478:29)\n    at Context.eval (https://rahulshettyacademy.com/__cypress/tests?p=cypress\\integration\\examples\\BDD\\ecommerce.feature:11799:35)",
+                "diff": null
+              },
+              "uuid": "8c02a557-06c6-4693-96e1-ed4e12c42d1d",
+              "parentUUID": "1a024712-bf01-48ad-b5a3-c51dc7c0fd82",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +82,12 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "8eab6cc3-9f41-4946-82bc-5ae5651bc960"
+            "ef49bc3d-99b8-4411-8ab0-2703e558dcaf",
+            "8c02a557-06c6-4693-96e1-ed4e12c42d1d"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 10736,
+          "duration": 6817,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
