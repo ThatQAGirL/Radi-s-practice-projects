@@ -23,7 +23,7 @@ this.data.productName.forEach(function(element) {
  
     cy.selectProduct(element)
   });
-  productPage.checkOutButton().click()
+  productPage.checkOut().click()
 })
 
 //And Validate the total prices
@@ -68,37 +68,4 @@ And('Validate the total prices',()=>
           expect(actualText.includes("Success")).to.be.true
         })
     })
-    //When I fill the form details
-    When('I fill the form details',function(dataTable)
-    {
-
-        // [bobz , male   ]
-        name = dataTable.rawTable[1][0]
-        homePage.getEditBox().type(dataTable.rawTable[1][0])
-        homePage.getGender().select(dataTable.rawTable[1][1])
-    })
-    // Then validate the forms behaviour
-    Then('validate the forms behaviour',function()
-    {
-    homePage.getTwoWayDataBinding().should('have.value',name)
-    homePage.getEditBox().should('have.attr','minlength','2')
-    homePage.getEntrepreneaur().should('be.disabled')
-    Cypress.config('defaultCommandTimeout', 8000)
-    })
-    // And select the Shop Page
-    And('select the Shop Page',()=>
-    {
-        homePage.getShopTab().click()
-    })
-
-
-
-
-
-   
-
-
-
-
-
-
+  

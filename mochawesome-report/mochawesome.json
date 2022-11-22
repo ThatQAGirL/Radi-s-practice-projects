@@ -1,15 +1,15 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 2,
-    "passes": 0,
+    "tests": 1,
+    "passes": 1,
     "pending": 0,
-    "failures": 2,
-    "start": "2022-11-21T22:18:04.190Z",
-    "end": "2022-11-21T22:18:19.080Z",
-    "duration": 14890,
-    "testsRegistered": 2,
-    "passPercent": 0,
+    "failures": 0,
+    "start": "2022-11-22T12:49:34.629Z",
+    "end": "2022-11-22T12:49:54.586Z",
+    "duration": 19957,
+    "testsRegistered": 1,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "e1f8d075-12a5-488f-b315-d9045d669a9c",
+      "uuid": "b4531cad-0a41-42a1-964a-106f5a6a9eeb",
       "title": "",
       "fullFile": "cypress\\integration\\examples\\BDD\\ecommerce.feature",
       "file": "cypress\\integration\\examples\\BDD\\ecommerce.feature",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "1a024712-bf01-48ad-b5a3-c51dc7c0fd82",
+          "uuid": "41809da1-bf03-4dda-94cd-3286f15b36f1",
           "title": "End to end Ecommerce validation",
           "fullFile": "",
           "file": "",
@@ -38,56 +38,29 @@
               "title": "Ecommerce products delivery",
               "fullTitle": "End to end Ecommerce validation Ecommerce products delivery",
               "timedOut": null,
-              "duration": 4419,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 13662,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
-              "err": {
-                "message": "TypeError: productPage.checkOutButton is not a function",
-                "estack": "TypeError: productPage.checkOutButton is not a function\n    at Context.eval (https://rahulshettyacademy.com/__cypress/tests?p=cypress\\integration\\examples\\BDD\\ecommerce.feature:68:15)\n    at Context.resolveAndRunStepDefinition (https://rahulshettyacademy.com/__cypress/tests?p=cypress\\integration\\examples\\BDD\\ecommerce.feature:12478:29)\n    at Context.eval (https://rahulshettyacademy.com/__cypress/tests?p=cypress\\integration\\examples\\BDD\\ecommerce.feature:11799:35)",
-                "diff": null
-              },
-              "uuid": "ef49bc3d-99b8-4411-8ab0-2703e558dcaf",
-              "parentUUID": "1a024712-bf01-48ad-b5a3-c51dc7c0fd82",
-              "isHook": false,
-              "skipped": false
-            },
-            {
-              "title": "Filling the form to shop",
-              "fullTitle": "End to end Ecommerce validation Filling the form to shop",
-              "timedOut": null,
-              "duration": 2398,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
-              "pending": false,
-              "context": null,
-              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
-              "err": {
-                "message": "TypeError: homePage.getEntrepreneaur is not a function",
-                "estack": "TypeError: homePage.getEntrepreneaur is not a function\n    at Context.eval (https://rahulshettyacademy.com/__cypress/tests?p=cypress\\integration\\examples\\BDD\\ecommerce.feature:117:12)\n    at Context.resolveAndRunStepDefinition (https://rahulshettyacademy.com/__cypress/tests?p=cypress\\integration\\examples\\BDD\\ecommerce.feature:12478:29)\n    at Context.eval (https://rahulshettyacademy.com/__cypress/tests?p=cypress\\integration\\examples\\BDD\\ecommerce.feature:11799:35)",
-                "diff": null
-              },
-              "uuid": "8c02a557-06c6-4693-96e1-ed4e12c42d1d",
-              "parentUUID": "1a024712-bf01-48ad-b5a3-c51dc7c0fd82",
+              "err": {},
+              "uuid": "f11522d8-e0dd-490b-922c-40c823d1d82a",
+              "parentUUID": "41809da1-bf03-4dda-94cd-3286f15b36f1",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "ef49bc3d-99b8-4411-8ab0-2703e558dcaf",
-            "8c02a557-06c6-4693-96e1-ed4e12c42d1d"
+          "passes": [
+            "f11522d8-e0dd-490b-922c-40c823d1d82a"
           ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 6817,
+          "duration": 13662,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
