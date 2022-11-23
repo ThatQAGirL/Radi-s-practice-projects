@@ -33,7 +33,7 @@ module.exports ={
    
     },
   
-    specPattern: 'cypress/integration/*.js'
+    specPattern: 'cypress/integration/examples/*.js'
 
 
 

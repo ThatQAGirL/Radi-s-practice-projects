@@ -24,13 +24,38 @@ it('My FirstTest Case', function()
         body: [{
             "book_name": "RobotFramework",
             "isbn": "984353",
-            "aisle": "982053"  }]
+            "aisle": "982053"  }] 
 
     }).as('bookretrievals')
     cy.get("button[class='btn btn-primary']").click()
-   cy.wait('@bookretrievals')
+   cy.wait('@bookretrievals').should(({request,response}) =>
+   {
+
+    cy.get('tr').should('have.length', response.body .length +1)
+    response.body .length 
+   })
+
+
+
+
+
+
+
+
+
+
+
 cy.get('p').should('have.text','Oops only 1 Book available')
-})
+
+
+//length of the response array = rows of table
+
+
+
+
 
 
 })
+})
+
+
