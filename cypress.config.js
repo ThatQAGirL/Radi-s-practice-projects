@@ -33,7 +33,7 @@ module.exports ={
    
     },
   
-    specPattern: 'cypress/integration/examples/BDD/ecommerce.feature'
+    specPattern: 'cypress/integration/*.js'
 
 
 
